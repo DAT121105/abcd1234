@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  color: rgb(73, 72, 72);
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  text-align: center;
+
+  background-image: url("./img/backgruond.jpg");
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header,
+footer,
+h1,
+h2,
+h3,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/*****************************/
+/* Header */
+/*****************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+h1 {
+  padding: 10px;
+  color: white;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #a80006, #ff4e50, #f9d423);
+}
+
+/*****************************/
+/* Main */
+/*****************************/
+main {
+  margin-top: 70px;
+}
+
+/*****************************/
+/* Container */
+/*****************************/
+.container {
+  width: 1000px;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+
+  backdrop-filter: blur(5px);
+}
+
+h2 {
+  text-align: left;
+  padding-left: 10px;
+  border-left: 8px solid gray;
+  margin-bottom: 20px;
+}
+
+/*****************************/
+/* Link */
+/*****************************/
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/*****************************/
+/* Grid */
+/*****************************/
+.sub_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+.item01 {
+  width: 100px;
+  height: 120px;
+  text-align: center;
+}
+
+.item01 img {
+  width: 70px;
+  height: 70px;
+}
+
+.item01 p {
+  margin-top: 8px;
+  font-size: 1.4rem;
+}
+
+/*****************************/
+/* Fade In */
+/*****************************/
+.fade-in {
+  animation: fadein 1.5s ease-out forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*****************************/
+/* Result */
+/*****************************/
+#result {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*****************************/
+/* Footer */
+/*****************************/
+footer {
+  margin-top: 20px;
+}
+
+footer p {
+  color: white;
+  background: rgba(1, 24, 31, 0.8);
+  padding: 5px;
+}
+
+/*****************************/
+/* Responsive */
+/*****************************/
+@media screen and (max-width: 480px) {
+  .sub_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .item01 {
+    width: 80px;
+    height: 100px;
+  }
+
+  .item01 img {
+    width: 60px;
+    height: 60px;
+  }
+}
